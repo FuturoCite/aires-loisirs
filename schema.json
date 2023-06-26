@@ -18,7 +18,7 @@
 		{
 			"title": "Fichier valide (CSV)",
 			"name": "exemple-valide-csv",
-			"path": "https://raw.githubusercontent.com/FuturoCite/standard-aires-de-loisirs/main/exemple-valide.csv"
+			"path": "https://raw.githubusercontent.com/FuturoCite/standard-aires-loisirs/main/exemple-valide.csv"
 		}
 	],
 	"author": "FuturoCité",
@@ -108,8 +108,8 @@
 	"version": "0.1.0",
 	"created": "2023-06-19",
 	"updated": "2023-06-23",
-	"homepage": "https://github.com/FuturoCite/standard-aires-de-loisirs",
-	"uri": "https://raw.githubusercontent.com/FuturoCite/standard-aires-de-loisirs/main/schema.json",
+	"homepage": "https://github.com/FuturoCite/standard-aires-loisirs",
+	"uri": "https://raw.githubusercontent.com/FuturoCite/standard-aires-loisirs/main/schema.json",
 	"fields": [
 		{
 			"name": "id",
