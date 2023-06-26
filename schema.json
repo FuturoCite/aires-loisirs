@@ -622,7 +622,7 @@
 			"title": "Année de certification",
 			"description": "Ce champ fournit l'année d'obtention du certificat dans le format AAAA. Si non applicable/non connu : ne pas renseigner ce champ.",
 			"example": "2011",
-			"type": "year",
+			"type": "string",
 			"constraints": {
 				"required": false
 			}
