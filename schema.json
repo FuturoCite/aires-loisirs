@@ -611,7 +611,7 @@
 			"name": "area",
 			"title": "Superficie",
 			"description": "Ce champ renseigne la superficie de l'aire de loisirs en m²",
-			"example": "15000.0",
+			"example": "15000",
 			"type": "number",
 			"constraints": {
 				"required": false
@@ -630,7 +630,7 @@
 		{
 			"name": "completion_year",
 			"title": "Année de réalisation",
-			"type": "year",
+			"type": "string",
 			"description": "Ce champ précise l'année d'installation de l'aire de loisirs dans le format AAAA",
 			"example": "1956",
 			"constraints": {
