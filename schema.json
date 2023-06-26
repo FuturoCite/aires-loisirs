@@ -182,7 +182,7 @@
 			"type": "string",
 			"constraints": {
 				"required": false
-			}"
+			}
 		},
 		{
 			"name": "municipality",
@@ -258,22 +258,22 @@
 		{
 			"name": "house_number",
 			"title": "Numéro de police le plus proche",
+			"description": "Ce champ est recommandé. Il contient le numéro de police (numéro de maison) le plus proche de l'aire de loisirs",
+			"example": "1",
 			"type": "string",
 			"constraints": {
 				"required": false
-			},
-			"description": "Ce champ est recommandé. Il contient le numéro de police (numéro de maison) le plus proche de l'aire de loisirs",
-			"example": "1"
+			}
 		},
 		{
 			"name": "distance",
 			"title": "Distance au point d'adresse",
+			"description": "Ce champ indique la distance, en mètres, entre l'aire de loisirs et le point d'adresse le plus proche introduit via les autres champs (code_rue_bestadress, num_police, …). En cas de décimale, le séparateur est le point.",
+			"example": "0",
 			"type": "number",
 			"constraints": {
 				"required": false
-			},
-			"description": "Ce champ indique la distance, en mètres, entre l'aire de loisirs et le point d'adresse le plus proche introduit via les autres champs (code_rue_bestadress, num_police, …). En cas de décimale, le séparateur est le point.",
-			"example": "0"
+			}
 		},
 		{
 			"name": "location_details",
@@ -438,38 +438,39 @@
 		{
 			"name": "pmr_module",
 			"title": "Module PMR",
+			"description": "Ce champ précise si l'aire de loisirs est équipée de modules accessibles aux personnes à mobilité réduite. Si des modules accessibles aux personnes à mobilité réduite existent utiliser la valeur 'true'. Si non, la valeur 'false'. Si non applicable/non connu : ne pas renseigner ce champ.",
+			"example": "true",
 			"type": "boolean",
 			"constraints": {
 				"required": false
-			},
-			"description": "Ce champ précise si l'aire de loisirs est équipée de modules accessibles aux personnes à mobilité réduite. Si des modules accessibles aux personnes à mobilité réduite existent utiliser la valeur 'true'. Si non, la valeur 'false'. Si non applicable/non connu : ne pas renseigner ce champ.",
-			"example": "true"
+			}
 		},
 		{
 			"name": "number_of_mods",
 			"title": "Nombre de modules",
+			"description": "Ce champ précise le nombre de modules présents sur l'aire de loisirs.",
+			"example": "50",
 			"type": "number",
 			"constraints": {
 				"required": false
-			},
-			"description": "Ce champ précise le nombre de modules présents sur l'aire de loisirs.",
-			"example": "50"
+			}
 		},
 		{
 			"name": "securing",
 			"title": "Sécurisation",
+			"description": "Ce champ décrit les dispositifs mis en place pour la sécurité.",
+			"example": "L'aspect sécurité est primordial ; tous les jeux installés répondent aux normes de sécurité européennes. Le site est entièrement grillagé et le seul point d'entrée - sortie se situe au niveau de la caisse d'entrée.",
 			"type": "string",
 			"constraints": {
 				"required": false
-			},
-			"description": "Ce champ décrit les dispositifs mis en place pour la sécurité.",
-			"example": "L'aspect sécurité est primordial ; tous les jeux installés répondent aux normes de sécurité européennes. Le site est entièrement grillagé et le seul point d'entrée - sortie se situe au niveau de la caisse d'entrée."
+			}
 		},
 		{
 			"name": "surface_type",
 			"title": "Type de surface",
 			"type": "string",
 			"description": "Ce champ décrit la surface de l'aire de jeux.",
+			"example": "Mixte",
 			"constraints": {
 				"required": true,
 				"enum": [
@@ -483,118 +484,118 @@
 					"Mixte",
 					"Autre"
 				]
-			},
-			"example": "Mixte"
+			}
 		},
 		{
 			"name": "closed_site",
 			"title": "Site fermé",
+			"description": "Ce champ précise si l'aire de loisirs se situe sur un site fermé par des barrières. Si le site est fermé utiliser la valeur 'true'. Si non, la valeur 'false'. Si non applicable/non connu : ne pas renseigner ce champ.",
+			"example": "true",
 			"type": "boolean",
 			"constraints": {
 				"required": false
-			},
-			"description": "Ce champ précise si l'aire de loisirs se situe sur un site fermé par des barrières. Si le site est fermé utiliser la valeur 'true'. Si non, la valeur 'false'. Si non applicable/non connu : ne pas renseigner ce champ.",
-			"example": "true"
+			}
 		},
 		{
 			"name": "bench",
 			"title": "Banc",
+			"description": "Ce champ précise si l'aire de loisirs est équipée de bancs. Si le site dispose de bancs utiliser la valeur 'true'. Si non, la valeur 'false'. Si non applicable/non connu : ne pas renseigner ce champ.",
+			"example": "true",
 			"type": "boolean",
 			"constraints": {
 				"required": false
-			},
-			"description": "Ce champ précise si l'aire de loisirs est équipée de bancs. Si le site dispose de bancs utiliser la valeur 'true'. Si non, la valeur 'false'. Si non applicable/non connu : ne pas renseigner ce champ.",
-			"example": "true"
+			}
 		},
 		{
 			"name": "table",
 			"title": "Table",
+			"description": "Ce champ précise si l'aire de loisirs est équipée de tables. Si le site dispose de tables utiliser la valeur 'true'. Si non, la valeur 'false'. Si non applicable/non connu : ne pas renseigner ce champ.",
+			"example": "true",
 			"type": "boolean",
 			"constraints": {
 				"required": false
-			},
-			"description": "Ce champ précise si l'aire de loisirs est équipée de tables. Si le site dispose de tables utiliser la valeur 'true'. Si non, la valeur 'false'. Si non applicable/non connu : ne pas renseigner ce champ.",
-			"example": "true"
+			}
 		},
 		{
 			"name": "shadow",
 			"title": "Ombre",
+			"description": "Ce champ précise si l'aire de loisirs offre des zones d'ombre. Si le site dispose de zones d'ombre utiliser la valeur 'true'. Si non, la valeur 'false'. Si non applicable/non connu : ne pas renseigner ce champ.",
+			"example": "true",
 			"type": "boolean",
 			"constraints": {
 				"required": false
-			},
-			"description": "Ce champ précise si l'aire de loisirs offre des zones d'ombre. Si le site dispose de zones d'ombre utiliser la valeur 'true'. Si non, la valeur 'false'. Si non applicable/non connu : ne pas renseigner ce champ.",
-			"example": "true"
+			}
 		},
 		{
 			"name": "catering",
 			"title": "Restauration",
+			"description": "Ce champ précise si l'aire de loisirs propose de la restauration avec vue sur l'aire de loisirs. Si le site dispose de restauration avec vue utiliser la valeur 'true'. Si non, la valeur 'false'. Si non applicable/non connu : ne pas renseigner ce champ.",
+			"example": "true",
 			"type": "boolean",
 			"constraints": {
 				"required": false
-			},
-			"description": "Ce champ précise si l'aire de loisirs propose de la restauration avec vue sur l'aire de loisirs. Si le site dispose de restauration avec vue utiliser la valeur 'true'. Si non, la valeur 'false'. Si non applicable/non connu : ne pas renseigner ce champ.",
-			"example": "true"
+			}
 		},
 		{
 			"name": "drinking_water_point",
 			"title": "Point d'eau potable",
+			"description": "Ce champ précise si l'aire de loisirs est équipée de points d'eau potable. Si le site dispose de points d'eau potable utiliser la valeur 'true'. Si non, la valeur 'false'. Si non applicable/non connu : ne pas renseigner ce champ.",
+			"example": "true",
 			"type": "boolean",
 			"constraints": {
 				"required": false
-			},
-			"description": "Ce champ précise si l'aire de loisirs est équipée de points d'eau potable. Si le site dispose de points d'eau potable utiliser la valeur 'true'. Si non, la valeur 'false'. Si non applicable/non connu : ne pas renseigner ce champ.",
-			"example": "true"
+			}
 		},
 		{
 			"name": "trash_can",
 			"title": "Poubelle",
+			"description": "Ce champ précise si l'aire de loisirs est équipée de poubelles. Si le site dispose de poubelles utiliser la valeur 'true'. Si non, la valeur 'false'. Si non applicable/non connu : ne pas renseigner ce champ.",
+			"example": "true",
 			"type": "boolean",
 			"constraints": {
 				"required": false
-			},
-			"description": "Ce champ précise si l'aire de loisirs est équipée de poubelles. Si le site dispose de poubelles utiliser la valeur 'true'. Si non, la valeur 'false'. Si non applicable/non connu : ne pas renseigner ce champ.",
-			"example": "true"
+			}
 		},
 		{
 			"name": "access_conditions",
 			"title": "Conditions d'accès",
+			"description": "Ce champ décrit les conditions d'entrées à l'aire de loisirs",
+			"example": "Le parc est accessible moyennant le paiement d'un droit d'entrée et selon un horaire.",
 			"type": "string",
 			"constraints": {
 				"required": false
-			},
-			"description": "Ce champ décrit les conditions d'entrées à l'aire de loisirs",
-			"example": "Le parc est accessible moyennant le paiement d'un droit d'entrée et selon un horaire."
+			}
 		},
 		{
 			"name": "schedule",
 			"title": "Horaires",
+			"description": "Le champ indique les horaires auxquels l'aire de loisirs est accessible. Il respecte le format proposé par OpenStreetMap (https://wiki.openstreetmap.org/wiki/FR:Key:opening_hours). L'outil YoHours (https://projets.pavie.info/yohours/) permet de générer des horaires au bon format. Le format OSM permet d'indiquer des exceptions pendant certaines périodes (vacances, jours fériés…). Pour les générer au bon format en utilisant YoHours, il suffit de les renseigner en cliquant sur le bouton 'plus' vert, situé en haut à gauche.",
+			"example": "Apr 01-28 We 13:00-18:00; Apr 01-28 Sa,Su 11:00-18:00; Apr 29-May 14,Jul 03-Aug 27,Oct 21-Nov 05 11:00-18:00; May 15-Jul 02,Aug 28-Oct 20 We-Su 11:00-18:00; May 15-Jul 02,Aug 28-Oct 20 Th,Fr off; Apr 10,May 18,May 29 11:00-18:00",
 			"type": "string",
 			"constraints": {
 				"required": false
-			},
-			"description": "Le champ indique les horaires auxquels l'aire de loisirs est accessible. Il respecte le format proposé par OpenStreetMap (https://wiki.openstreetmap.org/wiki/FR:Key:opening_hours). L'outil YoHours (https://projets.pavie.info/yohours/) permet de générer des horaires au bon format. Le format OSM permet d'indiquer des exceptions pendant certaines périodes (vacances, jours fériés…). Pour les générer au bon format en utilisant YoHours, il suffit de les renseigner en cliquant sur le bouton 'plus' vert, situé en haut à gauche.",
-			"example": "Apr 01-28 We 13:00-18:00; Apr 01-28 Sa,Su 11:00-18:00; Apr 29-May 14,Jul 03-Aug 27,Oct 21-Nov 05 11:00-18:00; May 15-Jul 02,Aug 28-Oct 20 We-Su 11:00-18:00; May 15-Jul 02,Aug 28-Oct 20 Th,Fr off; Apr 10,May 18,May 29 11:00-18:00"
+			}
 		},
 		{
 			"name": "prices",
 			"title": "Tarif",
+			
+			"description": "Ce champ décrit le tarif d'accès à l'aire de loisirs. Si une page web décrit le tarif, il est préférable de référencer cette page plutôt que de décrire les tarifs.",
+			"example": "Entrée générale individuelle : 3,00€\nEntrée réduction : 2,00€\nFamille nombreuse (sur présentation de la carte)\n60 ans et + (séniors)\nGroupe de minimum 15 personnes\nEntrée groupes scolaires, hors jours d'ouverture habituels, vacances et jours fériés : 1,50€\nEntrée enfants mesurant moins d'un mètre : Gratuit\nAbonnement individuel (pour 10 entrées) : 25,00 €",
 			"type": "string",
 			"constraints": {
 				"required": false
-			},
-			"description": "Ce champ décrit le tarif d'accès à l'aire de loisirs. Si une page web décrit le tarif, il est préférable de référencer cette page plutôt que de décrire les tarifs.",
-			"example": "Entrée générale individuelle : 3,00€\nEntrée réduction : 2,00€\nFamille nombreuse (sur présentation de la carte)\n60 ans et + (séniors)\nGroupe de minimum 15 personnes\nEntrée groupes scolaires, hors jours d'ouverture habituels, vacances et jours fériés : 1,50€\nEntrée enfants mesurant moins d'un mètre : Gratuit\nAbonnement individuel (pour 10 entrées) : 25,00 €"
+			}
 		},
 		{
 			"name": "provider",
 			"title": "Gestionnaire",
 			"type": "string",
+			"description": "Ce champ est recommandé. Ce champ renseigne le gestionnaire de l'aire récréative",
+			"example": "Ville de Namur",
 			"constraints": {
 				"required": false
 			},
-			"description": "Ce champ est recommandé. Ce champ renseigne le gestionnaire de l'aire récréative",
-			"example": "Ville de Namur"
 		},
 		{
 			"name": "covered",
