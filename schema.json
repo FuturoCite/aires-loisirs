@@ -198,7 +198,7 @@
 			"name": "ins_code",
 			"title": "Code INS",
 			"description": "Ce champ contient le code INS de la commune où se situe l'aire de loisirs. Il est accessible ici : https://statbel.fgov.be/fr/open-data/code-refnis",
-			"example": 92094,
+			"example": "92094",
 			"type": "string",
 			"constraints": {
 				"required": true,
@@ -239,7 +239,7 @@
 			"name": "street_number",
 			"title": "Code rue BeSTAddress",
 			"description": "Ce champ contient le code de la voirie où se situe l'aire de loisirs dans la base de données BeSTAdress (ou de la voirie la plus proche si elle n'est pas en voirie) : https://opendata.bosa.be/index.fr.html",
-			"example": 7753575,
+			"example": "7753575",
 			"type": "string",
 			"constraints": {
 				"required": true
@@ -601,7 +601,7 @@
 			"name": "covered",
 			"title": "Couvert",
 			"description": "Ce champ précise si l'aire de loisirs est couverte. Si le site est couvert utiliser la valeur 'true'. Si non, la valeur 'false'. Si non applicable/non connu : ne pas renseigner ce champ.",
-			"example": false,
+			"example": "false",
 			"type": "boolean",
 			"constraints": {
 				"required": false
@@ -611,7 +611,7 @@
 			"name": "area",
 			"title": "Superficie",
 			"description": "Ce champ renseigne la superficie de l'aire de loisirs en m²",
-			"example": 15000,
+			"example": "15000",
 			"type": "integer",
 			"constraints": {
 				"required": false
