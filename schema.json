@@ -595,65 +595,67 @@
 			"example": "Ville de Namur",
 			"constraints": {
 				"required": false
-			},
+			}
 		},
 		{
 			"name": "covered",
 			"title": "Couvert",
-			"type": "boolean",
-			"required": false,
 			"description": "Ce champ précise si l'aire de loisirs est couverte. Si le site est couvert utiliser la valeur 'true'. Si non, la valeur 'false'. Si non applicable/non connu : ne pas renseigner ce champ.",
-			"example": false
+			"example": false,
+			"type": "boolean",
+			"constraints": {
+				"required": false
+			}
 		},
 		{
 			"name": "area",
 			"title": "Superficie",
+			"description": "Ce champ renseigne la superficie de l'aire de loisirs en m²",
+			"example": 15000,
 			"type": "integer",
 			"constraints": {
 				"required": false
-			},
-			"description": "Ce champ renseigne la superficie de l'aire de loisirs en m²",
-			"example": 15000
+			}
 		},
 		{
 			"name": "certification_year",
 			"title": "Année de certification",
+			"description": "Ce champ fournit l'année d'obtention du certificat dans le format AAAA. Si non applicable/non connu : ne pas renseigner ce champ.",
+			"example": "2011",
 			"type": "year",
 			"constraints": {
 				"required": false
-			},
-			"description": "Ce champ fournit l'année d'obtention du certificat dans le format AAAA. Si non applicable/non connu : ne pas renseigner ce champ.",
-			"example": "2011"
+			}
 		},
 		{
 			"name": "completion_year",
 			"title": "Année de réalisation",
 			"type": "year",
+			"description": "Ce champ précise l'année d'installation de l'aire de loisirs dans le format AAAA",
+			"example": "1956",
 			"constraints": {
 				"required": false
-			},
-			"description": "Ce champ précise l'année d'installation de l'aire de loisirs dans le format AAAA",
-			"example": "1956"
+			}
 		},
 		{
 			"name": "created_date",
 			"title": "Date de création de la donnée",
+			"description": "Ce champ indique la date de création de la donnée dans le jeu. Il respecte le format ISO 8601 : année-mois-jour (YYYY-MM-DD)",
+			"example": "2023-06-21",
 			"type": "date",
 			"constraints": {
 				"required": false
-			},
-			"description": "Ce champ indique la date de création de la donnée dans le jeu. Il respecte le format ISO 8601 : année-mois-jour (YYYY-MM-DD)",
-			"example": "2023-06-21"
+			}
 		},
 		{
 			"name": "last_modified_date",
 			"title": "Date de dernière modification de la donnée",
+			"description": "Ce champ indique la date de la dernière modification de la donnée dans le jeu. Il respecte le format ISO 8601 : année-mois-jour (YYYY-MM-DD).",
+			"example": "2023-06-23",
 			"type": "date",
 			"constraints": {
 				"required": false
-			},
-			"description": "Ce champ indique la date de la dernière modification de la donnée dans le jeu. Il respecte le format ISO 8601 : année-mois-jour (YYYY-MM-DD).",
-			"example": "2023-06-23"
+			}
 		}
 	],
 	"primaryKey": "id"
