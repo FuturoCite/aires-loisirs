@@ -1,0 +1,654 @@
+{
+	"$schema": "https://frictionlessdata.io/schemas/table-schema.json",
+	"title": "Aires de loisirs",
+	"description": "Spécification du standard des aires de loisirs",
+	"keywords": [
+		"aire de loisirs",
+		"aire récréative"
+	],
+	"countryCode": "BE",
+	"licenses": [
+		{
+			"title": "Creative Commons",
+			"name": "CC-by 2.0 BE",
+			"path": "https://creativecommons.org/licenses/by/2.0/be/"
+		}
+	],
+	"resources": [
+		{
+			"title": "Fichier valide (CSV)",
+			"name": "exemple-valide-csv",
+			"path": "https://raw.githubusercontent.com/FuturoCite/standard-aires-de-loisirs/main/exemple-valide.csv"
+		}
+	],
+	"author": "FuturoCité",
+	"contact": "https://www.futurocite.be/contact/demande-informations/",
+	"contributors": [
+		{
+			"organisation": "FuturoCité",
+			"role": "contributor"
+		},
+		{
+			"organisation": "Datactivist",
+			"role": "contributor"
+		},
+		{
+			"organisation": "Ville de Marche-en-Famenne",
+			"role": "contributor"
+		},
+		{
+			"organisation": "Idelux",
+			"role": "contributor"
+		},
+		{
+			"organisation": "Ville de Liège",
+			"role": "contributor"
+		},
+		{
+			"organisation": "Ville de Namur",
+			"role": "contributor"
+		},
+		{
+			"organisation": "Ville de Walhain",
+			"role": "contributor"
+		},
+		{
+			"organisation": "Ville de Bastogne",
+			"role": "contributor"
+		},
+		{
+			"organisation": "Ville de La Louvière",
+			"role": "contributor"
+		},
+		{
+			"organisation": "Ville de Tournai",
+			"role": "contributor"
+		},
+		{
+			"organisation": "Service public de Wallonie",
+			"role": "contributor"
+		},
+		{
+			"organisation": "Bureau Economique de la Province de Namur",
+			"role": "contributor"
+		},
+		{
+			"organisation": "Ville d'Andenne",
+			"role": "contributor"
+		},
+		{
+			"organisation": "Ville de Chaudfontaine",
+			"role": "contributor"
+		},
+		{
+			"organisation": "Ville de Hannut",
+			"role": "contributor"
+		},
+		{
+			"organisation": "Intercommunale pour la Gestion et la Réalisation d'Etudes Techniques et Economiques",
+			"role": "contributor"
+		},
+		{
+			"organisation": "Intercommunale de Développement Economique et d'Aménagement du coeur du Hainaut",
+			"role": "contributor"
+		},
+		{
+			"organisation": "Ville de Mons",
+			"role": "contributor"
+		},
+		{
+			"organisation": "Ville de Chimay",
+			"role": "contributor"
+		},
+		{
+			"organisation": "Ville de Braine-L'Alleud",
+			"role": "contributor"
+		}
+	],
+	"version": "0.1.0",
+	"created": "2023-06-19",
+	"updated": "2023-06-23",
+	"homepage": "https://github.com/FuturoCite/standard-aires-de-loisirs",
+	"uri": "https://raw.githubusercontent.com/FuturoCite/standard-aires-de-loisirs/main/schema.json",
+	"fields": [
+		{
+			"name": "id",
+			"title": "Identifiant",
+			"type": "string",
+			"constraints": {
+				"required": true,
+				"unique": true
+			},
+			"description": "Ce champ contient un identifiant unique local. Le producteur de données le génère en associant le code INS de la commune dans laquelle se situe l'aire de loisirs à un nombre. Ce champ permet d'éviter localement les doublons. Le code INS de la commune est accessible ici: https://statbel.fgov.be/fr/open-data/code-refnis",
+			"example": "92003-106411"
+		},
+		{
+			"name": "name",
+			"title": "Nom",
+			"type": "string",
+			"constraints": {
+				"required": true
+			},
+			"description": "Ce champ contient le nom de l'aire de loisirs",
+			"example": "Parc Attractif Reine Fabiola"
+		},
+		{
+			"name": "description",
+			"title": "Description",
+			"type": "string",
+			"constraints": {
+				"required": true
+			},
+			"description": "Ce champ contient la description de l'aire de loisirs",
+			"example": "Au sommet de la Citadelle de Namur, dans un écrin de verdure protégé, le Parc Attractif Reine Fabiola ou le PARF offre de nombreuses possibilités de loisirs pour les enfants de 2,5 à 12 ans et les familles."
+		},
+		{
+			"name": "type",
+			"title": "Type",
+			"type": "string",
+			"constraints": {
+				"required": true,
+				"enum": [
+					"Aire de jeux",
+					"Aire de pique-nique",
+					"Aire de sports",
+					"Barbecue",
+					"Fitness urbain",
+					"Kiosque à musique",
+					"Mini-golf",
+					"Observatoire nature",
+					"Parcours santé",
+					"Patinoire",
+					"Piscine",
+					"Piste de sport",
+					"Port de plaisance",
+					"Sentier pieds nus",
+					"Skatepark",
+					"Table de jeux",
+					"Table de ping-pong",
+					"Zone de baignade",
+					"Autre"
+				]
+			},
+			"description": "Ce champ indique le type des aires de loisirs présents dans ce jeu.",
+			"example": "Aire de jeux"
+		},
+		{
+			"name": "pictures",
+			"title": "Photos",
+			"type": "string",
+			"description": "Ce champ contient une liste d'URLs, séparés par des virgules, qui renvoient vers des photos de l'aire de loisirs",
+			"constraints": {
+				"required": false
+			},
+			"example": "https://scontent-bru2-1.xx.fbcdn.net/v/t39.30808-6/344865144_1152258875591029_8277397311481241575_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=730e14&_nc_ohc=GmstaZcWInUAX8CEc5b&_nc_ht=scontent-bru2-1.xx&oh=00_AfA2hEU8j7GGPcdeYNg8VTW3eD6PFWCO7A5cO1VGGtRTGQ&oe=6498F4DD, https://scontent-bru2-1.xx.fbcdn.net/v/t39.30808-6/343680971_1301321430780204_1296473895705145354_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=730e14&_nc_ohc=26wZlse5M-sAX9cmThK&_nc_ht=scontent-bru2-1.xx&oh=00_AfDCeruBphobhl7UqqBOJfPqirL-mdN9C76ibWc6dlCnzg&oe=6499B04B, https://scontent-bru2-1.xx.fbcdn.net/v/t39.30808-6/289665405_10158483881762132_1208302920507048222_n.jpg?stp=c256.0.1536.1536a_dst-jpg_s851x315&_nc_cat=107&ccb=1-7&_nc_sid=da31f3&_nc_ohc=-FwB5-6Uzt0AX_N_ADs&_nc_ht=scontent-bru2-1.xx&oh=00_AfCnY6BPNmEUjL8jhbxJIGuLHsSpEJ3RfHPhHYLsNEFMnQ&oe=649842C4"
+		},
+		{
+			"name": "municipality",
+			"title": "Nom de la commune",
+			"type": "string",
+			"constraints": {
+				"required": true
+			},
+			"description": "Ce champ contient le nom de la commune dans laquelle se situe l'aire de loisirs. Le nom de la commune provient de la base de données BeST Address : https://opendata.bosa.be/index.fr.html ou de la liste des codes INS : https://statbel.fgov.be/fr/open-data/code-refnis",
+			"example": "Namur"
+		},
+		{
+			"name": "ins_code",
+			"title": "Code INS",
+			"type": "string",
+			"constraints": {
+				"required": true,
+				"pattern": "^\\d{5}$"
+			},
+			"description": "Ce champ contient le code INS de la commune où se situe l'aire de loisirs. Il est accessible ici : https://statbel.fgov.be/fr/open-data/code-refnis",
+			"example": 92094
+		},
+		{
+			"name": "zone_address",
+			"title": "Partie de commune",
+			"type": "string",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ contient le nom de la partie de commune où se situe l'aire de loisirs, conforme à l'appellation dans StatBel : https://statbel.fgov.be/fr/propos-de-statbel/methodologie/classifications/geographie",
+			"example": "Namur"
+		},
+		{
+			"name": "ins_zone_address",
+			"title": "Code INS de la partie de commune",
+			"type": "string",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ contient le code INS de la partie de commune où se situe l'aire de loisirs. La découpe géographique de StatBel Level 5 (NIS6) liste ces codes : https://statbel.fgov.be/fr/propos-de-statbel/methodologie/classifications/geographie",
+			"example": "92094A"
+		},
+		{
+			"name": "street_name",
+			"title": "Nom de rue",
+			"type": "string",
+			"constraints": {
+				"required": true
+			},
+			"description": "Ce champ renseigne le nom de la voirie où se situe l'aire de loisirs (ou de la voirie la plus proche si elle n'est pas en voirie).",
+			"example": "Rond-Point Michel Thonar"
+		},
+		{
+			"name": "street_number",
+			"title": "Code rue BeSTAddress",
+			"type": "string",
+			"constraints": {
+				"required": true
+			},
+			"description": "Ce champ contient le code de la voirie où se situe l'aire de loisirs dans la base de données BeSTAdress (ou de la voirie la plus proche si elle n'est pas en voirie) : https://opendata.bosa.be/index.fr.html",
+			"example": 7753575
+		},
+		{
+			"name": "street_number_rrn",
+			"title": "Code rue national",
+			"type": "number",
+			"constraints": {
+				"required": false
+			},
+			"description": "Code de la voirie où se situe l'aire de loisirs dans le registre national (ou de la voirie la plus proche si elle n'est pas en voirie)"
+		},
+		{
+			"name": "house_number",
+			"title": "Numéro de police le plus proche",
+			"type": "string",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ est recommandé. Il contient le numéro de police (numéro de maison) le plus proche de l'aire de loisirs",
+			"example": "1"
+		},
+		{
+			"name": "distance",
+			"title": "Distance au point d'adresse",
+			"type": "number",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ indique la distance, en mètres, entre l'aire de loisirs et le point d'adresse le plus proche introduit via les autres champs (code_rue_bestadress, num_police, …). En cas de décimale, le séparateur est le point.",
+			"example": "0"
+		},
+		{
+			"name": "location_details",
+			"title": "Précisions sur l'emplacement",
+			"type": "string",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ précise l'emplacement de l'aire de loisirs. Description des accès : https://www.namur.be/fr/loisirs/plein-air/parc-attractif-reine-fabiola/ma-visite/Infos-pratiques/acces",
+			"example": "Description des accès : https://www.namur.be/fr/loisirs/plein-air/parc-attractif-reine-fabiola/ma-visite/Infos-pratiques/acces"
+		},
+		{
+			"name": "coordinates",
+			"title": "Coordonnées",
+			"type": "geojson",
+			"description": "Ce champ indique les coordonnées de l'aire de loisirs. Il est au format GeoJSON (se référer au fichier csv d'exemple et/ou à la documentation pour un exemple de valeur bien formatée). S'il est impossible d'exporter la donnée depuis un logiciel métier, les coordonnées d'un lieu peuvent être générées ici : https://www.coordonnees-gps.fr/carte/pays/BE",
+			"constraints": {
+				"required": true
+			},
+			"example": {
+				"type": "Feature",
+				"geometry": {
+					"type": "Point",
+					"coordinates": [
+						4.852641239672008,
+						50.458207532294199
+					]
+				},
+				"properties": {
+					"name": "un nom"
+				}
+			}
+		},
+		{
+			"name": "geometry",
+			"title": "Geométrie",
+			"type": "geojson",
+			"description": "Ce champ indique la zone géopgrahique de l'aire de loisirs grâce à une liste de coordonnées. Cette liste est générée à partir d'un fichier GPX.",
+			"example": {
+				"type": "Feature",
+				"geometry": {
+					"type": "LineString",
+					"coordinates": [
+						[
+							4.852226,
+							50.457412
+						],
+						[
+							4.851918,
+							50.457424
+						],
+						[
+							4.851668,
+							50.457503
+						],
+						[
+							4.851486,
+							50.457636
+						],
+						[
+							4.851459,
+							50.457781
+						],
+						[
+							4.851486,
+							50.457916
+						],
+						[
+							4.852036,
+							50.458762
+						],
+						[
+							4.852417,
+							50.458953
+						],
+						[
+							4.852717,
+							50.458953
+						],
+						[
+							4.853355,
+							50.458718
+						],
+						[
+							4.853452,
+							50.458608
+						],
+						[
+							4.853522,
+							50.458496
+						],
+						[
+							4.85342,
+							50.458188
+						],
+						[
+							4.853109,
+							50.457871
+						],
+						[
+							4.852771,
+							50.45757
+						],
+						[
+							4.852465,
+							50.457447
+						],
+						[
+							4.852226,
+							50.457412
+						]
+					]
+				},
+				"properties": {
+					"name": "un nom"
+				}
+			}
+		},
+		{
+			"name": "contact",
+			"title": "Contact",
+			"type": "string",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ contient les informations de contact. Nous recommandons d'indiquer uniquement le site web de l'aire de loisirs afin de faciliter la maintenance et mise à jour des données",
+			"example": "https://www.namur.be/fr/loisirs/plein-air/parc-attractif-reine-fabiola/infos-contacts/contacter-le-parc-attractif-reine-fabiola"
+		},
+		{
+			"name": "minimum_age",
+			"title": "Age minimum",
+			"type": "number",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ est recommandé. Ce champ précise l'age minimum recommandé",
+			"exemple": "2"
+		},
+		{
+			"name": "maximum_age",
+			"title": "Age maximum",
+			"type": "number",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ est recommandé. Ce champ précise l'age maximum recommandé. Si l'aire de loisirs est adaptée aux adultes mettre 99.",
+			"exemple": "12"
+		},
+		{
+			"name": "disabled_access",
+			"title": "Accessibilité PMR",
+			"type": "boolean",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ précise si l'aire de loisirs est accessible aux personnes à mobilité réduite. Si l'emplacement est accessible utiliser la valeur 'true'. Si non, la valeur 'false'. Si non applicable/non connu : ne pas renseigner ce champ.",
+			"exemple": "true"
+		},
+		{
+			"name": "pmr_module",
+			"title": "Module PMR",
+			"type": "boolean",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ précise si l'aire de loisirs est équipée de modules accessibles aux personnes à mobilité réduite. Si des modules accessibles aux personnes à mobilité réduite existent utiliser la valeur 'true'. Si non, la valeur 'false'. Si non applicable/non connu : ne pas renseigner ce champ.",
+			"exemple": "true"
+		},
+		{
+			"name": "number_of_mods",
+			"title": "Nombre de modules",
+			"type": "number",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ précise le nombre de modules présents sur l'aire de loisirs.",
+			"exemple": "50"
+		},
+		{
+			"name": "securing",
+			"title": "Sécurisation",
+			"type": "string",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ décrit les dispositifs mis en place pour la sécurité.",
+			"example": "L'aspect sécurité est primordial ; tous les jeux installés répondent aux normes de sécurité européennes. Le site est entièrement grillagé et le seul point d'entrée - sortie se situe au niveau de la caisse d'entrée."
+		},
+		{
+			"name": "surface_type",
+			"title": "Type de surface",
+			"type": "string",
+			"description": "Ce champ décrit la surface de l'aire de jeux.",
+			"constraints": {
+				"required": true,
+				"enum": [
+					"Bois",
+					"Dalles amortissantes EN1177",
+					"Gravier",
+					"Herbe",
+					"Sable",
+					"Terre",
+					"Surface dure",
+					"Mixte",
+					"Autre"
+				]
+			},
+			"example": "Mixte"
+		},
+		{
+			"name": "closed_site",
+			"title": "Site fermé",
+			"type": "boolean",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ précise si l'aire de loisirs se situe sur un site fermé par des barrières. Si le site est fermé utiliser la valeur 'true'. Si non, la valeur 'false'. Si non applicable/non connu : ne pas renseigner ce champ.",
+			"example": "true"
+		},
+		{
+			"name": "bench",
+			"title": "Banc",
+			"type": "boolean",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ précise si l'aire de loisirs est équipée de bancs. Si le site dispose de bancs utiliser la valeur 'true'. Si non, la valeur 'false'. Si non applicable/non connu : ne pas renseigner ce champ.",
+			"example": "true"
+		},
+		{
+			"name": "table",
+			"title": "Table",
+			"type": "boolean",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ précise si l'aire de loisirs est équipée de tables. Si le site dispose de tables utiliser la valeur 'true'. Si non, la valeur 'false'. Si non applicable/non connu : ne pas renseigner ce champ.",
+			"example": "true"
+		},
+		{
+			"name": "shadow",
+			"title": "Ombre",
+			"type": "boolean",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ précise si l'aire de loisirs offre des zones d'ombre. Si le site dispose de zones d'ombre utiliser la valeur 'true'. Si non, la valeur 'false'. Si non applicable/non connu : ne pas renseigner ce champ.",
+			"example": "true"
+		},
+		{
+			"name": "catering",
+			"title": "Restauration",
+			"type": "boolean",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ précise si l'aire de loisirs propose de la restauration avec vue sur l'aire de loisirs. Si le site dispose de restauration avec vue utiliser la valeur 'true'. Si non, la valeur 'false'. Si non applicable/non connu : ne pas renseigner ce champ.",
+			"example": "true"
+		},
+		{
+			"name": "drinking_water_point",
+			"title": "Point d'eau potable",
+			"type": "boolean",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ précise si l'aire de loisirs est équipée de points d'eau potable. Si le site dispose de points d'eau potable utiliser la valeur 'true'. Si non, la valeur 'false'. Si non applicable/non connu : ne pas renseigner ce champ.",
+			"example": "true"
+		},
+		{
+			"name": "trash_can",
+			"title": "Poubelle",
+			"type": "boolean",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ précise si l'aire de loisirs est équipée de poubelles. Si le site dispose de poubelles utiliser la valeur 'true'. Si non, la valeur 'false'. Si non applicable/non connu : ne pas renseigner ce champ.",
+			"example": "true"
+		},
+		{
+			"name": "access_conditions",
+			"title": "Conditions d'accès",
+			"type": "string",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ décrit les conditions d'entrées à l'aire de loisirs",
+			"example": "Le parc est accessible moyennant le paiement d'un droit d'entrée et selon un horaire."
+		},
+		{
+			"name": "schedule",
+			"title": "Horaires",
+			"type": "string",
+			"constraints": {
+				"required": false
+			},
+			"description": "Le champ indique les horaires auxquels l'aire de loisirs est accessible. Il respecte le format proposé par OpenStreetMap (https://wiki.openstreetmap.org/wiki/FR:Key:opening_hours). L'outil YoHours (https://projets.pavie.info/yohours/) permet de générer des horaires au bon format. Le format OSM permet d'indiquer des exceptions pendant certaines périodes (vacances, jours fériés…). Pour les générer au bon format en utilisant YoHours, il suffit de les renseigner en cliquant sur le bouton 'plus' vert, situé en haut à gauche.",
+			"example": "Apr 01-28 We 13:00-18:00; Apr 01-28 Sa,Su 11:00-18:00; Apr 29-May 14,Jul 03-Aug 27,Oct 21-Nov 05 11:00-18:00; May 15-Jul 02,Aug 28-Oct 20 We-Su 11:00-18:00; May 15-Jul 02,Aug 28-Oct 20 Th,Fr off; Apr 10,May 18,May 29 11:00-18:00"
+		},
+		{
+			"name": "prices",
+			"title": "Tarif",
+			"type": "string",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ décrit le tarif d'accès à l'aire de loisirs. Si une page web décrit le tarif, il est préférable de référencer cette page plutôt que de décrire les tarifs.",
+			"example": "Entrée générale individuelle : 3,00€\nEntrée réduction : 2,00€\nFamille nombreuse (sur présentation de la carte)\n60 ans et + (séniors)\nGroupe de minimum 15 personnes\nEntrée groupes scolaires, hors jours d'ouverture habituels, vacances et jours fériés : 1,50€\nEntrée enfants mesurant moins d'un mètre : Gratuit\nAbonnement individuel (pour 10 entrées) : 25,00 €"
+		},
+		{
+			"name": "provider",
+			"title": "Gestionnaire",
+			"type": "string",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ est recommandé. Ce champ renseigne le gestionnaire de l'aire récréative",
+			"example": "Ville de Namur"
+		},
+		{
+			"name": "covered",
+			"title": "Couvert",
+			"type": "boolean",
+			"required": false,
+			"description": "Ce champ précise si l'aire de loisirs est couverte. Si le site est couvert utiliser la valeur 'true'. Si non, la valeur 'false'. Si non applicable/non connu : ne pas renseigner ce champ.",
+			"example": false
+		},
+		{
+			"name": "area",
+			"title": "Superficie",
+			"type": "integer",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ renseigne la superficie de l'aire de loisirs en m²",
+			"example": 15000
+		},
+		{
+			"name": "certification_year",
+			"title": "Année de certification",
+			"type": "year",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ fournit l'année d'obtention du certificat dans le format AAAA. Si non applicable/non connu : ne pas renseigner ce champ.",
+			"example": "2011"
+		},
+		{
+			"name": "completion_year",
+			"title": "Année de réalisation",
+			"type": "year",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ précise l'année d'installation de l'aire de loisirs dans le format AAAA",
+			"example": "1956"
+		},
+		{
+			"name": "created_date",
+			"title": "Date de création de la donnée",
+			"type": "date",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ indique la date de création de la donnée dans le jeu. Il respecte le format ISO 8601 : année-mois-jour (YYYY-MM-DD)",
+			"example": "2023-06-21"
+		},
+		{
+			"name": "last_modified_date",
+			"title": "Date de dernière modification de la donnée",
+			"type": "date",
+			"constraints": {
+				"required": false
+			},
+			"description": "Ce champ indique la date de la dernière modification de la donnée dans le jeu. Il respecte le format ISO 8601 : année-mois-jour (YYYY-MM-DD).",
+			"example": "2023-06-23"
+		}
+	],
+	"primaryKey": "id"
+}
