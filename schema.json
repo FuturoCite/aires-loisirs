@@ -612,7 +612,7 @@
 			"title": "Superficie",
 			"description": "Ce champ renseigne la superficie de l'aire de loisirs en m²",
 			"example": "15000",
-			"type": "integer",
+			"type": "number",
 			"constraints": {
 				"required": false
 			}
