@@ -249,7 +249,7 @@
 			"name": "street_number_rrn",
 			"title": "Code rue national",
 			"description": "Code de la voirie où se situe l'aire de loisirs dans le registre national (ou de la voirie la plus proche si elle n'est pas en voirie)",
-			"example": "",
+			"example": "8701",
 			"type": "number",
 			"constraints": {
 				"required": false
@@ -278,21 +278,17 @@
 		{
 			"name": "location_details",
 			"title": "Précisions sur l'emplacement",
+			"description": "Ce champ précise l'emplacement de l'aire de loisirs. Description des accès : https://www.namur.be/fr/loisirs/plein-air/parc-attractif-reine-fabiola/ma-visite/Infos-pratiques/acces",
+			"example": "Description des accès : https://www.namur.be/fr/loisirs/plein-air/parc-attractif-reine-fabiola/ma-visite/Infos-pratiques/acces",
 			"type": "string",
 			"constraints": {
 				"required": false
-			},
-			"description": "Ce champ précise l'emplacement de l'aire de loisirs. Description des accès : https://www.namur.be/fr/loisirs/plein-air/parc-attractif-reine-fabiola/ma-visite/Infos-pratiques/acces",
-			"example": "Description des accès : https://www.namur.be/fr/loisirs/plein-air/parc-attractif-reine-fabiola/ma-visite/Infos-pratiques/acces"
+			}
 		},
 		{
 			"name": "coordinates",
 			"title": "Coordonnées",
-			"type": "geojson",
 			"description": "Ce champ indique les coordonnées de l'aire de loisirs. Il est au format GeoJSON (se référer au fichier csv d'exemple et/ou à la documentation pour un exemple de valeur bien formatée). S'il est impossible d'exporter la donnée depuis un logiciel métier, les coordonnées d'un lieu peuvent être générées ici : https://www.coordonnees-gps.fr/carte/pays/BE",
-			"constraints": {
-				"required": true
-			},
 			"example": {
 				"type": "Feature",
 				"geometry": {
@@ -305,12 +301,15 @@
 				"properties": {
 					"name": "un nom"
 				}
+			},
+			"type": "geojson",
+			"constraints": {
+				"required": true
 			}
 		},
 		{
 			"name": "geometry",
 			"title": "Geométrie",
-			"type": "geojson",
 			"description": "Ce champ indique la zone géopgrahique de l'aire de loisirs grâce à une liste de coordonnées. Cette liste est générée à partir d'un fichier GPX.",
 			"example": {
 				"type": "Feature",
@@ -390,47 +389,51 @@
 				"properties": {
 					"name": "un nom"
 				}
+			},
+			"type": "geojson",
+			"constraints": {
+				"required": false
 			}
 		},
 		{
 			"name": "contact",
 			"title": "Contact",
+			"description": "Ce champ contient les informations de contact. Nous recommandons d'indiquer uniquement le site web de l'aire de loisirs afin de faciliter la maintenance et mise à jour des données",
+			"example": "https://www.namur.be/fr/loisirs/plein-air/parc-attractif-reine-fabiola/infos-contacts/contacter-le-parc-attractif-reine-fabiola",
 			"type": "string",
 			"constraints": {
 				"required": false
-			},
-			"description": "Ce champ contient les informations de contact. Nous recommandons d'indiquer uniquement le site web de l'aire de loisirs afin de faciliter la maintenance et mise à jour des données",
-			"example": "https://www.namur.be/fr/loisirs/plein-air/parc-attractif-reine-fabiola/infos-contacts/contacter-le-parc-attractif-reine-fabiola"
+			}
 		},
 		{
 			"name": "minimum_age",
 			"title": "Age minimum",
+			"description": "Ce champ est recommandé. Ce champ précise l'age minimum recommandé",
+			"example": "2",
 			"type": "number",
 			"constraints": {
 				"required": false
-			},
-			"description": "Ce champ est recommandé. Ce champ précise l'age minimum recommandé",
-			"example": "2"
+			}
 		},
 		{
 			"name": "maximum_age",
 			"title": "Age maximum",
+			"description": "Ce champ est recommandé. Ce champ précise l'age maximum recommandé. Si l'aire de loisirs est adaptée aux adultes mettre 99.",
+			"example": "12",
 			"type": "number",
 			"constraints": {
 				"required": false
-			},
-			"description": "Ce champ est recommandé. Ce champ précise l'age maximum recommandé. Si l'aire de loisirs est adaptée aux adultes mettre 99.",
-			"example": "12"
+			}
 		},
 		{
 			"name": "disabled_access",
 			"title": "Accessibilité PMR",
+			"description": "Ce champ précise si l'aire de loisirs est accessible aux personnes à mobilité réduite. Si l'emplacement est accessible utiliser la valeur 'true'. Si non, la valeur 'false'. Si non applicable/non connu : ne pas renseigner ce champ.",
+			"example": "true",
 			"type": "boolean",
 			"constraints": {
 				"required": false
-			},
-			"description": "Ce champ précise si l'aire de loisirs est accessible aux personnes à mobilité réduite. Si l'emplacement est accessible utiliser la valeur 'true'. Si non, la valeur 'false'. Si non applicable/non connu : ne pas renseigner ce champ.",
-			"example": "true"
+			}
 		},
 		{
 			"name": "pmr_module",
