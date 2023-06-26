@@ -250,7 +250,7 @@
 			"title": "Code rue national",
 			"description": "Code de la voirie où se situe l'aire de loisirs dans le registre national (ou de la voirie la plus proche si elle n'est pas en voirie)",
 			"example": "8701",
-			"type": "number",
+			"type": "string",
 			"constraints": {
 				"required": false
 			}
