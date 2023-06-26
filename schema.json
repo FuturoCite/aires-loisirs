@@ -114,37 +114,40 @@
 		{
 			"name": "id",
 			"title": "Identifiant",
+			"description": "Ce champ contient un identifiant unique local. Le producteur de données le génère en associant le code INS de la commune dans laquelle se situe l'aire de loisirs à un nombre. Ce champ permet d'éviter localement les doublons. Le code INS de la commune est accessible ici: https://statbel.fgov.be/fr/open-data/code-refnis",
+			"example": "92003-106411",
 			"type": "string",
 			"constraints": {
 				"required": true,
 				"unique": true
-			},
-			"description": "Ce champ contient un identifiant unique local. Le producteur de données le génère en associant le code INS de la commune dans laquelle se situe l'aire de loisirs à un nombre. Ce champ permet d'éviter localement les doublons. Le code INS de la commune est accessible ici: https://statbel.fgov.be/fr/open-data/code-refnis",
-			"example": "92003-106411"
+			}
+			
 		},
 		{
 			"name": "name",
 			"title": "Nom",
+			"description": "Ce champ contient le nom de l'aire de loisirs",
+			"example": "Parc Attractif Reine Fabiola",
 			"type": "string",
 			"constraints": {
 				"required": true
-			},
-			"description": "Ce champ contient le nom de l'aire de loisirs",
-			"example": "Parc Attractif Reine Fabiola"
+			}
 		},
 		{
 			"name": "description",
 			"title": "Description",
+			"description": "Ce champ contient la description de l'aire de loisirs",
+			"example": "Au sommet de la Citadelle de Namur, dans un écrin de verdure protégé, le Parc Attractif Reine Fabiola ou le PARF offre de nombreuses possibilités de loisirs pour les enfants de 2,5 à 12 ans et les familles.",
 			"type": "string",
 			"constraints": {
 				"required": true
-			},
-			"description": "Ce champ contient la description de l'aire de loisirs",
-			"example": "Au sommet de la Citadelle de Namur, dans un écrin de verdure protégé, le Parc Attractif Reine Fabiola ou le PARF offre de nombreuses possibilités de loisirs pour les enfants de 2,5 à 12 ans et les familles."
+			}
 		},
 		{
 			"name": "type",
 			"title": "Type",
+			"description": "Ce champ indique le type des aires de loisirs présents dans ce jeu.",
+			"example": "Aire de jeux",
 			"type": "string",
 			"constraints": {
 				"required": true,
@@ -169,89 +172,88 @@
 					"Zone de baignade",
 					"Autre"
 				]
-			},
-			"description": "Ce champ indique le type des aires de loisirs présents dans ce jeu.",
-			"example": "Aire de jeux"
+			}
 		},
 		{
 			"name": "pictures",
 			"title": "Photos",
-			"type": "string",
 			"description": "Ce champ contient une liste d'URLs, séparés par des virgules, qui renvoient vers des photos de l'aire de loisirs",
+			"example": "https://scontent-bru2-1.xx.fbcdn.net/v/t39.30808-6/344865144_1152258875591029_8277397311481241575_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=730e14&_nc_ohc=GmstaZcWInUAX8CEc5b&_nc_ht=scontent-bru2-1.xx&oh=00_AfA2hEU8j7GGPcdeYNg8VTW3eD6PFWCO7A5cO1VGGtRTGQ&oe=6498F4DD, https://scontent-bru2-1.xx.fbcdn.net/v/t39.30808-6/343680971_1301321430780204_1296473895705145354_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=730e14&_nc_ohc=26wZlse5M-sAX9cmThK&_nc_ht=scontent-bru2-1.xx&oh=00_AfDCeruBphobhl7UqqBOJfPqirL-mdN9C76ibWc6dlCnzg&oe=6499B04B, https://scontent-bru2-1.xx.fbcdn.net/v/t39.30808-6/289665405_10158483881762132_1208302920507048222_n.jpg?stp=c256.0.1536.1536a_dst-jpg_s851x315&_nc_cat=107&ccb=1-7&_nc_sid=da31f3&_nc_ohc=-FwB5-6Uzt0AX_N_ADs&_nc_ht=scontent-bru2-1.xx&oh=00_AfCnY6BPNmEUjL8jhbxJIGuLHsSpEJ3RfHPhHYLsNEFMnQ&oe=649842C4
+			"type": "string",
 			"constraints": {
 				"required": false
-			},
-			"example": "https://scontent-bru2-1.xx.fbcdn.net/v/t39.30808-6/344865144_1152258875591029_8277397311481241575_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=730e14&_nc_ohc=GmstaZcWInUAX8CEc5b&_nc_ht=scontent-bru2-1.xx&oh=00_AfA2hEU8j7GGPcdeYNg8VTW3eD6PFWCO7A5cO1VGGtRTGQ&oe=6498F4DD, https://scontent-bru2-1.xx.fbcdn.net/v/t39.30808-6/343680971_1301321430780204_1296473895705145354_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=730e14&_nc_ohc=26wZlse5M-sAX9cmThK&_nc_ht=scontent-bru2-1.xx&oh=00_AfDCeruBphobhl7UqqBOJfPqirL-mdN9C76ibWc6dlCnzg&oe=6499B04B, https://scontent-bru2-1.xx.fbcdn.net/v/t39.30808-6/289665405_10158483881762132_1208302920507048222_n.jpg?stp=c256.0.1536.1536a_dst-jpg_s851x315&_nc_cat=107&ccb=1-7&_nc_sid=da31f3&_nc_ohc=-FwB5-6Uzt0AX_N_ADs&_nc_ht=scontent-bru2-1.xx&oh=00_AfCnY6BPNmEUjL8jhbxJIGuLHsSpEJ3RfHPhHYLsNEFMnQ&oe=649842C4"
+			}"
 		},
 		{
 			"name": "municipality",
 			"title": "Nom de la commune",
+			"description": "Ce champ contient le nom de la commune dans laquelle se situe l'aire de loisirs. Le nom de la commune provient de la base de données BeST Address : https://opendata.bosa.be/index.fr.html ou de la liste des codes INS : https://statbel.fgov.be/fr/open-data/code-refnis",
+			"example": "Namur",
 			"type": "string",
 			"constraints": {
 				"required": true
-			},
-			"description": "Ce champ contient le nom de la commune dans laquelle se situe l'aire de loisirs. Le nom de la commune provient de la base de données BeST Address : https://opendata.bosa.be/index.fr.html ou de la liste des codes INS : https://statbel.fgov.be/fr/open-data/code-refnis",
-			"example": "Namur"
+			}
 		},
 		{
 			"name": "ins_code",
 			"title": "Code INS",
+			"description": "Ce champ contient le code INS de la commune où se situe l'aire de loisirs. Il est accessible ici : https://statbel.fgov.be/fr/open-data/code-refnis",
+			"example": 92094,
 			"type": "string",
 			"constraints": {
 				"required": true,
 				"pattern": "^\\d{5}$"
-			},
-			"description": "Ce champ contient le code INS de la commune où se situe l'aire de loisirs. Il est accessible ici : https://statbel.fgov.be/fr/open-data/code-refnis",
-			"example": 92094
+			}
 		},
 		{
 			"name": "zone_address",
 			"title": "Partie de commune",
+			"description": "Ce champ contient le nom de la partie de commune où se situe l'aire de loisirs, conforme à l'appellation dans StatBel : https://statbel.fgov.be/fr/propos-de-statbel/methodologie/classifications/geographie",
+			"example": "Namur",
 			"type": "string",
 			"constraints": {
 				"required": false
-			},
-			"description": "Ce champ contient le nom de la partie de commune où se situe l'aire de loisirs, conforme à l'appellation dans StatBel : https://statbel.fgov.be/fr/propos-de-statbel/methodologie/classifications/geographie",
-			"example": "Namur"
+			}
 		},
 		{
 			"name": "ins_zone_address",
 			"title": "Code INS de la partie de commune",
+			"description": "Ce champ contient le code INS de la partie de commune où se situe l'aire de loisirs. La découpe géographique de StatBel Level 5 (NIS6) liste ces codes : https://statbel.fgov.be/fr/propos-de-statbel/methodologie/classifications/geographie",
+			"example": "92094A",
 			"type": "string",
 			"constraints": {
 				"required": false
-			},
-			"description": "Ce champ contient le code INS de la partie de commune où se situe l'aire de loisirs. La découpe géographique de StatBel Level 5 (NIS6) liste ces codes : https://statbel.fgov.be/fr/propos-de-statbel/methodologie/classifications/geographie",
-			"example": "92094A"
+			}
 		},
 		{
 			"name": "street_name",
 			"title": "Nom de rue",
+			"description": "Ce champ renseigne le nom de la voirie où se situe l'aire de loisirs (ou de la voirie la plus proche si elle n'est pas en voirie).",
+			"example": "Rond-Point Michel Thonar",
 			"type": "string",
 			"constraints": {
 				"required": true
-			},
-			"description": "Ce champ renseigne le nom de la voirie où se situe l'aire de loisirs (ou de la voirie la plus proche si elle n'est pas en voirie).",
-			"example": "Rond-Point Michel Thonar"
+			}
 		},
 		{
 			"name": "street_number",
 			"title": "Code rue BeSTAddress",
+			"description": "Ce champ contient le code de la voirie où se situe l'aire de loisirs dans la base de données BeSTAdress (ou de la voirie la plus proche si elle n'est pas en voirie) : https://opendata.bosa.be/index.fr.html",
+			"example": 7753575,
 			"type": "string",
 			"constraints": {
 				"required": true
-			},
-			"description": "Ce champ contient le code de la voirie où se situe l'aire de loisirs dans la base de données BeSTAdress (ou de la voirie la plus proche si elle n'est pas en voirie) : https://opendata.bosa.be/index.fr.html",
-			"example": 7753575
+			}
 		},
 		{
 			"name": "street_number_rrn",
 			"title": "Code rue national",
+			"description": "Code de la voirie où se situe l'aire de loisirs dans le registre national (ou de la voirie la plus proche si elle n'est pas en voirie)",
+			"example": "",
 			"type": "number",
 			"constraints": {
 				"required": false
-			},
-			"description": "Code de la voirie où se situe l'aire de loisirs dans le registre national (ou de la voirie la plus proche si elle n'est pas en voirie)"
+			}
 		},
 		{
 			"name": "house_number",
@@ -408,7 +410,7 @@
 				"required": false
 			},
 			"description": "Ce champ est recommandé. Ce champ précise l'age minimum recommandé",
-			"exemple": "2"
+			"example": "2"
 		},
 		{
 			"name": "maximum_age",
@@ -418,7 +420,7 @@
 				"required": false
 			},
 			"description": "Ce champ est recommandé. Ce champ précise l'age maximum recommandé. Si l'aire de loisirs est adaptée aux adultes mettre 99.",
-			"exemple": "12"
+			"example": "12"
 		},
 		{
 			"name": "disabled_access",
@@ -428,7 +430,7 @@
 				"required": false
 			},
 			"description": "Ce champ précise si l'aire de loisirs est accessible aux personnes à mobilité réduite. Si l'emplacement est accessible utiliser la valeur 'true'. Si non, la valeur 'false'. Si non applicable/non connu : ne pas renseigner ce champ.",
-			"exemple": "true"
+			"example": "true"
 		},
 		{
 			"name": "pmr_module",
@@ -438,7 +440,7 @@
 				"required": false
 			},
 			"description": "Ce champ précise si l'aire de loisirs est équipée de modules accessibles aux personnes à mobilité réduite. Si des modules accessibles aux personnes à mobilité réduite existent utiliser la valeur 'true'. Si non, la valeur 'false'. Si non applicable/non connu : ne pas renseigner ce champ.",
-			"exemple": "true"
+			"example": "true"
 		},
 		{
 			"name": "number_of_mods",
@@ -448,7 +450,7 @@
 				"required": false
 			},
 			"description": "Ce champ précise le nombre de modules présents sur l'aire de loisirs.",
-			"exemple": "50"
+			"example": "50"
 		},
 		{
 			"name": "securing",
