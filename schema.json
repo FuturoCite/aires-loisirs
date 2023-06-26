@@ -269,7 +269,7 @@
 			"name": "distance",
 			"title": "Distance au point d'adresse",
 			"description": "Ce champ indique la distance, en mètres, entre l'aire de loisirs et le point d'adresse le plus proche introduit via les autres champs (code_rue_bestadress, num_police, …). En cas de décimale, le séparateur est le point.",
-			"example": "0",
+			"example": "2.34",
 			"type": "number",
 			"constraints": {
 				"required": false
