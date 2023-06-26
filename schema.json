@@ -622,7 +622,7 @@
 			"title": "Année de certification",
 			"description": "Ce champ fournit l'année d'obtention du certificat dans le format AAAA. Si non applicable/non connu : ne pas renseigner ce champ.",
 			"example": "2011",
-			"type": "string",
+			"type": "year",
 			"constraints": {
 				"required": false
 			}
@@ -630,7 +630,7 @@
 		{
 			"name": "completion_year",
 			"title": "Année de réalisation",
-			"type": "string",
+			"type": "year",
 			"description": "Ce champ précise l'année d'installation de l'aire de loisirs dans le format AAAA",
 			"example": "1956",
 			"constraints": {
