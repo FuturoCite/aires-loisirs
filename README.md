@@ -87,8 +87,8 @@ Les fichiers doivent, sauf exception et autant que possible, respecter les règl
 
 * YYYY-MM-DD : Date de création du fichier
 * idProducteur : code INS unique de la commune pour identifier le producteur
-* circuits-touristiques : nom du fichier, en minuscules non accentuées
-* territoire : Nom du territoire concerné, non accentué (exemple : Liege)
+* aires-loisirs : nom du fichier, en minuscules non accentuées
+* territoire : Nom du territoire concerné, non accentué (exemple : Namur)
 * extension : Si les règles de formatage sont respectées, l'extension est .csv
 
 Exemple : 2022-10-25_62063_aires-loisirs_Namur.csv
