@@ -1,6 +1,6 @@
 # standard-aires-loisirs
 Ce schéma permet de modéliser les différents attributs des aires de loisirs. On entend par aires de loisirs : Aire de jeux, Aire de pique-nique, Aire de sports, Barbecue, Fitness urbain, Kiosque à musique, Mini-golf, Observatoire nature, Parcours santé, Patinoire, Piscine, Piste de sport, Port de plaisance, Sentier pieds nus, Skatepark, Table de jeux, Table de ping-pong, Zone de baignade, Autre. 
-Un jeu de données basé sur ce standard devra contenir un seul type d'aires de loisirs.
+Un jeu de données basé sur ce standard devrait idéalement contenir un seul type d'aires de loisirs.
 
 ## Contexte
 
